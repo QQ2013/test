@@ -21,4 +21,5 @@ def print_others(msg):
         res1 = res.decode('UTF-8')
         msg.sender.send(res1)
         
-embed()
+#embed()
+bot.join()
