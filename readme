@@ -1,0 +1,13 @@
+1.wx
+pip2.7 install -U wxpy
+pip2.7 install -U pillow
+2.git
+yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+yum -y install git-core
+git config --global core.editor vim
+git config --global user.name "QQ2013"
+git config --global user.email 371499961@qq.com
+3.ssh
+ssh-keygen -t rsa -C "371499961@qq.com"
+4.w
+pip2.7 install beautifulsoup4
