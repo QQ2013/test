@@ -25,8 +25,9 @@ def main( ):
             #wlog('%s:%s>>%s\n'%(str_time,msg.sender.remark_name,msg.text))
             wlog('{}:{}>>{}\n'.format(str_time,msg.sender.remark_name,msg.text.encode('UTF-8')))
             os.chdir("/root/test")
-            msg.sender.send(u"你好我在吃饭")
-            result=os.popen('./wtest.py')
+            #msg.sender.send(u"你好我在吃饭")
+            #result=os.popen('./wtest.py')
+            result=os.popen('./search.sh {}'.format(msg.text.encode('UTF-8')))
             res=result.read()
             res1 = res.decode('UTF-8')
             msg.sender.send(res1)
@@ -34,7 +35,7 @@ def main( ):
     #embed()
     send=1
     while True:   
-        sleep(10)   
+        sleep(1000)   
         str_time=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
         my_friend=bot.friends().search('test')[0]
         my_friend.send(str_time)

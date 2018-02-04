@@ -1,0 +1,3 @@
+#!/bin/sh
+#./mycurl --connect-timeout 10 -m 60 http://127.0.0.1:9999/?$1
+curl -s  http://127.0.0.1:9999/?$1
