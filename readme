@@ -13,3 +13,13 @@ ssh-keygen -t rsa -C "371499961@qq.com"
 pip2.7 install beautifulsoup4
 5.deam
 pip2.7 install daemonize
+6.仅将二维码保存至图片
+修改/uar/lib/.../itchat/components/login.py
+with open(picDir, 'wb') as f:
+#f.write(qrStorage.getvalue())
+f.write("/var/www/html/qr.png")
+#utils.print_qr(picDir)
+7.注意事项
+（1）微信好友必须修改一次备注，如果不修改消息无法发送
+（2）登陆不成功时，删除登陆缓存
+

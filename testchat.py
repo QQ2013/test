@@ -5,12 +5,12 @@ import time
 import os
 bot = Bot(cache_path=True,console_qr=1) 
 time.sleep(2)
-my_friend=bot.friends().search('test')[0]
+my_friend=bot.friends().search('cat')[0]
 print(my_friend)
 my_friend.send('hellow world')
 @bot.register()
 def print_others(msg):
-    if (msg.sender.remark_name=="test"):
+    if (msg.sender.remark_name=="cat"):
         print(msg.sender.remark_name)
         print(msg.text)
         print(msg.sender)
@@ -25,7 +25,7 @@ def print_others(msg):
         msg.sender.send(res1)
         
 #embed()
-#bot.join()
+bot.join()
 while True:
     time.sleep(3)
     if (time.localtime.tm_sec==0):
